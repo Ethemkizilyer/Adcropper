@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="./login.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <img class="whitelogo" src="./assets/logo.png" alt="" />
+      </div>
+
+      <div class="twopage">
+        <div class="formbg">
+          <div class="head">
+            <img src="./assets/adc-logo.svg" alt="" />
+            <h3>Welcome to Adcropper!</h3>
+          </div>
+          <div class="formbg-inner padding-horizontal--48">
+            <form id="stripe-login">
+              <div class="field padding-bottom--24">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  placeholder="info@adcropper.com"
+                  name="email"
+                />
+              </div>
+              <div class="field padding-bottom--24">
+                <div class="grid--50-50">
+                  <label for="password">Password</label>
+                  <div class="reset-pass">
+                    <a href="#">Forgot password?</a>
+                  </div>
+                </div>
+                <input
+                  type="password"
+                  placeholder="••••••••••••‵"
+                  name="password"
+                />
+              </div>
+              <div
+                class="field field-checkbox padding-bottom--24 flex-flex align-center"
+              >
+                <label for="checkbox">
+                  <input type="checkbox" name="checkbox" /> Remember Me
+                </label>
+              </div>
+              <div>
+                <button class="btn">Sign in</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="formbg">
+          <div class="head">
+            <img src="./assets/adc-logo.svg" alt="" />
+            <h3>New Password</h3>
+          </div>
+          <div class="formbg-inner padding-horizontal--48">
+            <form id="stripe-login">
+              <div class="field padding-bottom--24">
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  placeholder="••••••••••••"
+                  name="email"
+                />
+              </div>
+              <div class="field padding-bottom--24">
+                <div class="grid--50-50">
+                  <label for="password">Repeat Password</label>
+                </div>
+                <input
+                  type="password"
+                  placeholder="••••••••••••"
+                  name="password"
+                />
+              </div>
+
+              <div class="field padding-bottom--24">
+                <button class="btn">Sign in</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

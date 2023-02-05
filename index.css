@@ -1,0 +1,983 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  background-image: url(./assets/background-desktop.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  background-color: #753c77;
+}
+
+.plane {
+  width: 100%;
+  height: 100%;
+}
+
+.door {
+  width: 13%;
+  height: 46%;
+  z-index: 2;
+  position: absolute;
+  left: 27.5%;
+  top: 24%;
+  animation: doormove 1s linear forwards 1s;
+}
+.backround {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem 5rem 5rem 3rem;
+}
+
+.text {
+  height: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.buttons {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.btn {
+  width: 250px;
+  height: 64px;
+  background: #faff00;
+  border-radius: 40px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+
+  color: #bd00ff;
+}
+
+p {
+  width: 362px;
+  height: 100px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+}
+
+.btn1 {
+  position: absolute;
+  width: 250px;
+  height: 64px;
+  left: 0px;
+  top: 8px;
+  background: #2b3e4f;
+  border-radius: 40px;
+  z-index: -1;
+}
+
+iframe {
+  border-radius: 20px;
+}
+
+.manu1 {
+  width: 10%;
+  height: 39%;
+  z-index: 3;
+  position: absolute;
+  left: 31.5%;
+  top: 30.5%;
+
+  opacity: 0;
+  animation: manu1 2s linear forwards 3s, manu1zoom 2s linear forwards 3s,
+    manu1bounce 2s forwards 5s 2, manu1delete 0.1s linear forwards 9s;
+}
+.manu2 {
+  width: 30%;
+  height: 117%;
+  z-index: 4;
+  position: absolute;
+  left: 40%;
+  top: -10%;
+
+  opacity: 0;
+  animation: manu2 2s linear forwards 9s,
+    manu2bounce 3s linear infinite forwards 11s,
+    manu2king 1s ease infinite forwards 11s;
+}
+
+.manu2up {
+  width: 22%;
+  height: 117%;
+  z-index: 5;
+  position: absolute;
+  left: 44.6%;
+  top: -10%;
+
+  opacity: 0;
+  animation: manu3 2s linear forwards 9.6s,
+    manu2bounce 3s linear infinite forwards 11s,
+    manu2kingup 1s ease infinite forwards 11s;
+}
+
+.confeti {
+  width: 100%;
+  height: 100%;
+  z-index: 8;
+  opacity: 0;
+  animation: confetianimate 3s linear forwards infinite 11s;
+  position: absolute;
+}
+.confeti1 {
+  width: 100%;
+  height: 100%;
+  z-index: 8;
+  opacity: 0;
+  animation: confetianimate 3s linear forwards infinite 13s;
+  position: absolute;
+}
+
+.home {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.box {
+  width: 80%;
+  height: 60%;
+
+  position: absolute;
+  right: -10%;
+  top: 30%;
+
+  animation: move 1s linear forwards;
+}
+
+.coin1-1 {
+  width: 5%;
+  height: 7%;
+  top: -20%;
+  position: absolute;
+  animation: rain 3s linear forwards infinite 12s;
+}
+
+.coin1-2 {
+  width: 3%;
+  height: 8%;
+  right: 70%;
+  top: -10%;
+  position: absolute;
+  animation: rain 8s linear forwards infinite 12s;
+}
+
+.coin1-3 {
+  width: 3%;
+  height: 8%;
+  right: 70%;
+  top: -40%;
+  position: absolute;
+  animation: rain 3s linear forwards infinite 12s;
+}
+
+.coin2-1 {
+  width: 7%;
+  height: 8%;
+  right: 45%;
+  top: -8%;
+  position: absolute;
+  animation: rain 3s linear forwards infinite 12s;
+}
+
+.coin2-2 {
+  width: 7%;
+  height: 8%;
+  right: 85%;
+  top: -20%;
+  position: absolute;
+  animation: rain 6s linear forwards infinite 12s;
+}
+
+.coin3-1 {
+  width: 7%;
+  height: 8%;
+  right: 85%;
+  top: -80%;
+  position: absolute;
+  animation: rain 9s linear forwards infinite 12s;
+}
+
+.coin3-2 {
+  width: 7%;
+  height: 8%;
+  right: 25%;
+  top: -80%;
+  position: absolute;
+  animation: rain 5s linear forwards infinite 12s;
+}
+
+.coin4-1 {
+  width: 7%;
+  height: 8%;
+  right: 60%;
+  top: -85%;
+  position: absolute;
+  animation: rain 3s linear forwards infinite 12s;
+}
+
+.coin4-2 {
+  width: 7%;
+  height: 8%;
+  right: 10%;
+  top: -85%;
+  position: absolute;
+  animation: rain 3s linear forwards infinite 12s;
+}
+
+.coin5-1 {
+  width: 7%;
+  height: 8%;
+  right: 35%;
+  top: -75%;
+  position: absolute;
+  animation: rain 2s linear forwards infinite 12s;
+}
+
+@keyframes move {
+  from {
+    right: 0px;
+  }
+  to {
+    right: calc(100% - 85%);
+  }
+}
+
+@keyframes doormove {
+  from {
+    left: 27.5%;
+  }
+  to {
+    left: 34.5%;
+  }
+}
+
+@keyframes manu1 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes manu2king {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  75% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes manu2kingup {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    z-index: 2;
+  }
+}
+
+@keyframes manu1zoom {
+  0% {
+    transform: scale(1) translateX(0%);
+  }
+  25% {
+    transform: scale(1.5) translateX(30%);
+  }
+  50% {
+    transform: scale(2) translateX(40%);
+  }
+  75% {
+    transform: scale(2.5) translateX(50%);
+  }
+  100% {
+    transform: scale(3) translateX(60%);
+  }
+}
+
+@keyframes manu1bounce {
+  0% {
+    transform: scale(3) translateX(60%) translateY(0%);
+  }
+  33% {
+    transform: scale(3) translateX(60%) translateY(-20%);
+  }
+  66% {
+    transform: scale(3) translateX(60%) translateY(0%);
+  }
+}
+
+@keyframes manu2 {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes manu3 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes manu1delete {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes manu2up {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.6;
+  }
+}
+
+@keyframes confetianimate {
+  from {
+    opacity: 0;
+    top: -100%;
+  }
+  to {
+    opacity: 1;
+    top: 100%;
+  }
+}
+
+@keyframes manu2bounce {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(-20%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes rain {
+  from {
+    top: 0;
+  }
+  to {
+    top: 100%;
+  }
+}
+
+@media (max-width: 591px) {
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 140vw;
+
+    background-image: url(./assets/background-mobile.jpg);
+  }
+
+  .plane {
+    width: 800px;
+    height: 400px;
+    background-size: cover;
+  }
+  .box {
+    width: 80%;
+    height: 60%;
+
+    position: absolute;
+    right: -10%;
+    top: 30%;
+
+    animation: move 1s linear forwards;
+  }
+  .door {
+    width: 21%;
+    height: 40.5%;
+    z-index: 2;
+    position: absolute;
+    left: 50%;
+    top: 20.5%;
+    animation: doormove 1s linear forwards 1s;
+  }
+
+  .manu1 {
+    width: 10%;
+    height: 29%;
+    z-index: 3;
+    position: absolute;
+    left: 50%;
+    top: 20.5%;
+
+    opacity: 0;
+    animation: manu1 2s linear forwards 3s, manu1zoom 2s linear forwards 3s,
+      manu1bounce 2s forwards 5s 2, manu1delete 0.1s linear forwards 9s;
+  }
+
+  .manu2 {
+    width: 30%;
+    height: 117%;
+    z-index: 4;
+    position: absolute;
+    left: 50%;
+    top: -10%;
+
+    opacity: 0;
+    animation: manu2 2s linear forwards 9s,
+      manu2bounce 3s linear infinite forwards 11s,
+      manu2king 1s ease infinite forwards 11s;
+  }
+
+  .manu2up {
+    width: 22%;
+    height: 117%;
+    z-index: 5;
+    position: absolute;
+    left: 55%;
+    top: -10%;
+
+    opacity: 0;
+    animation: manu2 2s linear forwards 9.6s,
+      manu2bounce 3s linear infinite forwards 11s,
+      manu2kingup 1s ease infinite forwards 11s;
+  }
+
+  @keyframes move {
+    from {
+      right: 0px;
+    }
+    to {
+      right: calc(100% - 70%);
+    }
+  }
+  @keyframes doormove {
+    from {
+      left: 50%;
+    }
+    to {
+      left: 62%;
+    }
+  }
+
+  @keyframes manu1 {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes manu2king {
+    from {
+      opacity: 0.2;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes manu2kingup {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0.2;
+    }
+  }
+
+  @keyframes manu1zoom {
+    0% {
+      transform: scale(1) translateX(0%) translateY(5%);
+    }
+    25% {
+      transform: scale(1.5) translateX(30%) translateY(10%);
+    }
+    50% {
+      transform: scale(2) translateX(60%) translateY(15%);
+    }
+    75% {
+      transform: scale(2.5) translateX(50%) translateY(25%);
+    }
+    100% {
+      transform: scale(3) translateX(60%) translateY(35%);
+    }
+  }
+
+  @keyframes manu1bounce {
+    0% {
+      transform: scale(3) translateX(60%) translateY(20%);
+    }
+    33% {
+      transform: scale(3) translateX(60%) translateY(10%);
+    }
+    66% {
+      transform: scale(3) translateX(60%) translateY(20%);
+    }
+  }
+
+  @keyframes manu2 {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes manu1delete {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  @keyframes manu2up {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 140vw;
+    background-color: #753c77;
+  }
+
+  .plane {
+    width: 750px;
+    height: 70%;
+  }
+
+  .door {
+    width: 30%;
+    height: 33%;
+    z-index: 2;
+    position: absolute;
+    left: 58%;
+    top: 16%;
+    animation: doormove 1s linear forwards 1s;
+  }
+  .backround {
+    gap: 5rem;
+    text-align: justify;
+    padding: 2rem;
+  }
+
+  .text {
+    height: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 1rem;
+  }
+
+  .buttons {
+    margin-top: 6rem;
+  }
+
+  .btn {
+    width: 150px;
+    height: 64px;
+    background: #faff00;
+    border-radius: 40px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+
+    color: #bd00ff;
+  }
+
+  p {
+    width: 250px;
+    height: 100px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .btn1 {
+    position: absolute;
+    width: 150px;
+    height: 64px;
+    left: 0px;
+    top: 8px;
+    background: #2b3e4f;
+    border-radius: 40px;
+    z-index: -1;
+    margin: 0 auto;
+  }
+
+  iframe {
+    width: 300px;
+    border-radius: 30px;
+  }
+
+  .manu1 {
+    width: 20%;
+    height: 30%;
+    z-index: 3;
+    position: absolute;
+    left: 50%;
+    top: 39%;
+
+    opacity: 0;
+    animation: manu1 2s linear forwards 3s, manu1zoom 2s linear forwards 3s,
+      manu1bounce 2s forwards 5s 2, manu1delete 0.1s linear forwards 9.5s;
+  }
+  .manu2 {
+    width: 55%;
+    height: 117%;
+    z-index: 4;
+    position: absolute;
+    left: 64%;
+    top: -15%;
+
+    opacity: 0;
+    animation: manu2 2s linear forwards 9.6s,
+      manu2bounce 3s linear infinite forwards 11s,
+      manu2king 1s ease infinite forwards 11s;
+  }
+
+  .manu2up {
+    width: 42.5%;
+    height: 117%;
+    z-index: 5;
+    position: absolute;
+    left: 71%;
+    top: -15%;
+
+    opacity: 0;
+    animation: manu2 2s linear forwards 9.6s,
+      manu2bounce 3s linear infinite forwards 11s,
+      manu2kingup 1s ease infinite forwards 11s;
+  }
+
+  .confeti {
+    width: 100%;
+    height: 100%;
+    z-index: 8;
+    opacity: 0;
+    animation: confetianimate 3s linear forwards infinite 11s;
+    position: absolute;
+  }
+
+  .home {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+  }
+
+  .container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .box {
+    height: 50%;
+
+    position: absolute;
+    right: 10%;
+    top: 50%;
+
+    animation: move 1s linear forwards;
+  }
+
+  .coin1-1 {
+    width: 5%;
+    height: 7%;
+    top: -10%;
+    position: absolute;
+    animation: rain 3s linear forwards infinite 12s;
+  }
+
+  .coin1-2 {
+    width: 3%;
+    height: 8%;
+    right: 60%;
+    top: -10%;
+    position: absolute;
+    animation: rain 8s linear forwards infinite 12s;
+  }
+
+  .coin1-3 {
+    width: 3%;
+    height: 8%;
+    right: 30%;
+    top: -50%;
+    position: absolute;
+    animation: rain 3s linear forwards infinite 12s;
+  }
+
+  .coin2-1 {
+    width: 7%;
+    height: 8%;
+    right: 45%;
+    top: -8%;
+    position: absolute;
+    animation: rain 3s linear forwards infinite 12s;
+  }
+
+  .coin2-2 {
+    width: 7%;
+    height: 8%;
+    right: 85%;
+    top: -20%;
+    position: absolute;
+    animation: rain 6s linear forwards infinite 12s;
+  }
+
+  .coin3-1 {
+    width: 7%;
+    height: 8%;
+    right: 25%;
+    top: -80%;
+    position: absolute;
+    animation: rain 9s linear forwards infinite 12s;
+  }
+
+  .coin3-2 {
+    width: 7%;
+    height: 8%;
+    right: 55%;
+    top: -80%;
+    position: absolute;
+    animation: rain 5s linear forwards infinite 12s;
+  }
+
+  .coin4-1 {
+    width: 7%;
+    height: 8%;
+    right: 10%;
+    top: -85%;
+    position: absolute;
+    animation: rain 3s linear forwards infinite 12s;
+  }
+
+  .coin4-2 {
+    width: 7%;
+    height: 8%;
+    right: 10%;
+    top: -85%;
+    position: absolute;
+    animation: rain 3s linear forwards infinite 12s;
+  }
+
+  .coin5-1 {
+    width: 7%;
+    height: 8%;
+    right: 35%;
+    top: -75%;
+    position: absolute;
+    animation: rain 2s linear forwards infinite 12s;
+  }
+
+  @keyframes move {
+    from {
+      right: 0px;
+    }
+    to {
+      right: calc(100% - 65%);
+    }
+  }
+
+  @keyframes doormove {
+    from {
+      left: 61%;
+    }
+    to {
+      left: 76%;
+    }
+  }
+
+  @keyframes manu1 {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes manu2king {
+    from {
+      opacity: 0.2;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes manu2kingup {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0.2;
+    }
+  }
+
+  @keyframes manu1zoom {
+    0% {
+      transform: scale(0.9) translateX(70%) translateY(-70%);
+    }
+    25% {
+      transform: scale(1.5) translateX(80%);
+    }
+    50% {
+      transform: scale(2) translateX(50%);
+    }
+    75% {
+      transform: scale(2.5) translateX(60%);
+    }
+    100% {
+      transform: scale(3) translateX(60%);
+    }
+  }
+
+  @keyframes manu1bounce {
+    0% {
+      transform: scale(3) translateX(60%) translateY(0%);
+    }
+    33% {
+      transform: scale(3) translateX(60%) translateY(-20%);
+    }
+    66% {
+      transform: scale(3) translateX(60%) translateY(0%);
+    }
+  }
+
+  @keyframes manu2 {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes manu1delete {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  @keyframes manu2up {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes confetianimate {
+    from {
+      opacity: 0;
+      top: -100%;
+    }
+    to {
+      opacity: 1;
+      top: 100%;
+    }
+  }
+
+  @keyframes manu2bounce {
+    0% {
+      transform: translateY(0%);
+    }
+    50% {
+      transform: translateY(-20%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
+
+  @keyframes rain {
+    from {
+      top: 0;
+    }
+    to {
+      top: 100%;
+    }
+  }
+}
